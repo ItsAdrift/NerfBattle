@@ -1,0 +1,44 @@
+body {
+    margin: 1% auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    background-color: rgb(26, 26, 26);
+    color: whitesmoke;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    margin-top: -50px;
+}
+
+.topnav {
+    overflow: hidden;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav div {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav div:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav div.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
