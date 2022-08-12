@@ -6,18 +6,21 @@ if(!isset($_SESSION))
     
     function handleLogin() {
         $username = $_SESSION['username'];
-        console_log("$username");
+        $password = $_SESSION['password'];
+        console_log("$username  | $password");
+
+        $conn = $GLOBALS['conn'];
+        $sql = "SELECT id FROM Users WHERE user=$username AND pass=$password";
+
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+              console_log($row["id"]);
+            }
+          } else {
+            console_log("No Results");
+          }
     }
 ?>
 <html></html>
-
-<?php
-function console_log($output, $with_script_tags = true) {
-    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
-');';
-    if ($with_script_tags) {
-        $js_code = '<script>' . $js_code . '</script>';
-    }
-    echo $js_code;
-}
-?>

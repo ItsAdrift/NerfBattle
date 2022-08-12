@@ -3,6 +3,7 @@
     { 
         session_start(); 
     }
+    include("db.php");
 ?>
 <html>
     <link rel="stylesheet" href="style.css">
@@ -16,7 +17,7 @@
             <div class="active" href="#home">Home</div>
         </div>
 
-        <h1>Nerf Battle</h1>
+        <h1>Website</h1>
 
         
     </head>
